@@ -1,0 +1,22 @@
+[
+    {
+        "id": "iconify",
+        "title": "Iconify",
+        "description": "Turn ugly hashes into beautiful icons.",
+        "description_short": "Turn ugly hashes into beautiful icons.",
+        "link_demo": "http://raed.it/iconify/",
+        "link_github": "https://github.com/RaedsLab/Iconify",
+        "image_main": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+        "image_alt": "iconify"
+    },
+    {
+        "id": "lab",
+        "title": "Raed's Lab",
+        "description": "A lab and portfolio for diffrent projects.<br>The layout comes from a ZURB template and the backend is PHP. The entries are fetched from a json file.",
+        "description_short": "A PHP based lab and portfolio for diffrent projects.",
+        "link_demo": "http://raed.it/lab",
+        "link_github": "hhttps://github.com/RaedsLab/Lab",
+        "image_main": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+        "image_alt": "RaedsLab"
+    }
+]

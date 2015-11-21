@@ -75,9 +75,8 @@ class Entry {
      */
 
     private static function getJson() {
-        $gistURL = 'https://gist.githubusercontent.com/RaedsLab/'
-                . 'e373550c98e730f810d3/raw/';
-        return file_get_contents($gistURL);
+        //$gistURL = 'https://gist.githubusercontent.com/RaedsLab/e373550c98e730f810d3/raw/';
+        return file_get_contents('./lab_portfolio.json');
     }
 
     /*

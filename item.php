@@ -7,18 +7,17 @@ if (isset($_GET['l']) && $_GET['l'] != "") {
     $local_id = $_GET['l'];
 } else {
     // Go to 404
+    header("Location: 404.html");
 }
-
 $entries = portfolio\Entry::getAllEntries();
 if ($entries == NULL) {
-    // Go to 503
+    header("Location: 503.html");
 }
 $entry = portfolio\Entry::getEntryById($entries, $local_id);
 if ($entry == NULL) {
-    /// Go to 404
+    header("Location: 404.html");
 }
 ?>
-
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -26,13 +25,14 @@ if ($entry == NULL) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title><?php echo $entry->title; ?> | Raed's Lab</title>
         <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="css/item.css">
     </head>
     <body>
         <div class="top-bar">
             <div class="row">
                 <div class="top-bar-left">
-                    <div class="text-menu">Raed's Lab</div>
+                    <a class="text-menu" href="./">Raed's Lab</a>
                 </div>
             </div>
         </div>
@@ -75,25 +75,8 @@ if ($entry == NULL) {
                 <div class="tabs-panel is-active" id="panel1">
                     <h4>Reviews</h4>
                     <div class="media-object">
-                        <div class="media-object-section">
-                            <h5>Mike Stevenson</h5>
-                            <p>
-                                I'm going to improvise. Listen, there's something you
-                                should know about me... about inception. An idea is like a virus,
-                                resilient, highly contagious. The smallest seed of an idea can grow.
-                                It can grow to define or destroy you.
-                            </p>
-                        </div>
+                        <?php include './src/disqus_code.php'; ?>
                     </div>
-
-                    <form>
-                        <label>
-                            My Review
-                            <textarea placeholder="None"></textarea>
-                        </label>
-                        <button type="submit" class="button">Submit Review</button>
-                    </form>
-
                 </div>
                 <div class="tabs-panel" id="panel2">
                     <div class="row medium-up-3 large-up-5">
@@ -117,27 +100,20 @@ if ($entry == NULL) {
                                     <p> 
                                         <?php echo $entries[$ex]->description_short; ?>
                                     </p>
-                                    <a href="http://raed.it/lab?l=<?php echo $entries[$ex]->id; ?>" class="button tiny expanded">Check</a>
+                                    <a href="http://raed.it/lab?l=<?php echo $entries[$ex]->id; ?>"
+                                       class="button tiny expanded">Check</a>
                                 </div>
                                 <?php
                             }
                         }
                         ?>
-
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row column">
-            <hr>
-            <ul class="menu">
-                <li>Raed's Lab</li>
-                <li><a href="http://raed.it">Home</a></li>
-                <li><a href="http://raed.it/blog">Blog</a></li>
-                <li><a href="https://github.com/RaedsLab">Github</a></li>
-                <li class="float-right">Copyleft <?php echo date('Y'); ?></li>
-            </ul>
-        </div>
+        <br>
+        <?php include './footer.php'; ?>
+
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
         <script>

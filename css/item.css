@@ -1,9 +1,7 @@
-
 /* 
     Created on : Nov 20, 2015, 10:23:01 PM
     Author     : Raed CHAMMAM
 */
-
 .resp-sharing-button {
     display: inline-block;
     border-radius: 5px;
@@ -55,16 +53,62 @@
 
 #mainImg{
     height: 350px;
-    width: 650px;
-}
+    width: 650px;}
 .top-bar{
-    background-color: #03A9F4;
-}
+    background-color: #03A9F4;}
 .text-menu{
     color: white;
-    font-weight: bold;
+    font-weight: bold;}
+#demo-link{
+    background-color: #8BC34A;}
+
+
+.full-width {
+    max-width: 1400px;
 }
 
-#demo-link{
-    background-color: #8BC34A;
+.footer {
+    background-color: #03A9F4;
+    padding: 2rem 4rem;
+    text-align: center;
+    color: #fff;
+}
+
+.footer i {
+    font-size: 100px;
+}
+
+.footer h4 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+    font-weight: 300;
+    font-size: 1em;
+    color: #fff;
+}
+
+@media only screen and (min-width: 40.063em) {
+    .footer .columns:nth-child(n+2) {
+        border-left: 1px solid #b3b3b3;
+        min-height: 280px;
+    }
+}
+
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-resume{
+    color: #075683 !important;
+    font-weight: bold !important;
+}
+
+.footer-links li {
+    margin-top: .5em;
 }
