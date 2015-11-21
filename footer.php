@@ -19,7 +19,7 @@
         </div>
 
         <div class="small-6 medium-3 large-2 columns">
-            <h4>Work With Me</h4>
+            <h4><b><u>Work With Me</u></b></h4>
             <ul class="footer-links">
                 <li><a href="http://raed.it">What I Do</a></li>
                 <li><a href="http://raed.it/blog">Blog</a></li>
@@ -27,7 +27,7 @@
         </div>
 
         <div class="small-6 medium-3 large-2 columns">
-            <h4>Follow Me</h4>
+            <h4><b><u>Follow Me</u></b></h4>
             <ul class="footer-links">
                 <li><a href="https://github.com/RaedsLab">GitHub</a></li>
                 <li><a href="https://www.facebook.com/rchammam">Facebook</a></li>

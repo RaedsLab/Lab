@@ -4,7 +4,8 @@
 
 .footer {
     background-color: #03A9F4;
-    padding: 2rem 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     text-align: center;
     color: #fff;
 }
@@ -68,8 +69,27 @@
 .thumb{
     padding-left: 0;
     padding-right: 0;
+    max-height: 118px;
 }
 .column h5{
     padding-top: 3px;
     padding-left: 10px;
+}
+
+#front-page-logo{
+    position: relative;
+    float: left;
+    padding-left: 15%;
+    height: 84px;
+}
+
+.callout.primary{
+    background-color: #03A9F4 !important;
+    color: white;
+    border-width: 0px !important;
+
+}
+
+.off-canvas{
+    background-color: white !important;
 }
